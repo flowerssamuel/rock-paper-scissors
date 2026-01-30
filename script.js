@@ -9,3 +9,8 @@ let getComputerChoice = () => {
         computerChoice = "Scissors";
     return computerChoice;
 };
+
+let getHumanChoice = () => {
+    userInput = prompt("Enter Rock, Paper or Scissors");
+    return userInput;
+};
