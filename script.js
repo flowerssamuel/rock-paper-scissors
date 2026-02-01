@@ -48,6 +48,9 @@ let playGame = () => {
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
+
+    console.log(`The Player's Score is ${humanScore}`);
+    console.log(`The Computer's Score is ${computerScore}`);
 };
 
 playGame();
