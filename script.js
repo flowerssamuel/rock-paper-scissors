@@ -29,13 +29,13 @@ let playGame = () => {
         } else if (humanChoice === "SCISSORS" && computerChoice === "PAPER") {
             console.log("You win! Scissors beats Paper");
             ++humanScore;
-        } else if (computerChoice === "ROCK" && humanChoice === "SCISSORS"){
+        } else if (computerChoice === "ROCK" && humanChoice === "SCISSORS") {
             console.log("You lose! Rock beats Scissors");
             ++computerScore;
-        } else if (computerChoice === "PAPER" && humanChoice === "ROCK"){
+        } else if (computerChoice === "PAPER" && humanChoice === "ROCK") {
             console.log("You lose! Paper beats Rock");
             ++computerScore; 
-        } else if (computerChoice === "SCISSORS" && humanChoice === "PAPER"){
+        } else if (computerChoice === "SCISSORS" && humanChoice === "PAPER") {
             console.log("You lose! Scissors beats Paper");
             ++computerScore;
         } else if (humanChoice === computerChoice) {
