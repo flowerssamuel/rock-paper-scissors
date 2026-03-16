@@ -2,11 +2,11 @@ let getComputerChoice = () => {
     let randomNumber = Math.floor(Math.random() * 3);
     let computerChoice;
     if (randomNumber === 0) {
-        computerChoice = "ROCK";
+        computerChoice = "Rock";
     } else if (randomNumber === 1) {
-        computerChoice = "PAPER";
+        computerChoice = "Paper";
     } else 
-        computerChoice = "SCISSORS";
+        computerChoice = "Scissors";
     return computerChoice;
 };
 
@@ -18,22 +18,22 @@ let playGame = () => {
     let humanScore = 0;
     let computerScore = 0;
     let playRound = (humanChoice, computerChoice) => {
-        if (humanChoice === "ROCK" && computerChoice === "SCISSORS") {
+        if (humanChoice === "Rock" && computerChoice === "Scissors") {
             console.log("You win! Rock beats Scissors");
             ++humanScore;
-        } else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
+        } else if (humanChoice === "Paper" && computerChoice === "Rock") {
             console.log("You win! Paper beats Rock");
             ++humanScore;
-        } else if (humanChoice === "SCISSORS" && computerChoice === "PAPER") {
+        } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
             console.log("You win! Scissors beats Paper");
             ++humanScore;
-        } else if (computerChoice === "ROCK" && humanChoice === "SCISSORS") {
+        } else if (computerChoice === "Rock" && humanChoice === "Scissors") {
             console.log("You lose! Rock beats Scissors");
             ++computerScore;
-        } else if (computerChoice === "PAPER" && humanChoice === "ROCK") {
+        } else if (computerChoice === "Paper" && humanChoice === "Rock") {
             console.log("You lose! Paper beats Rock");
             ++computerScore; 
-        } else if (computerChoice === "SCISSORS" && humanChoice === "PAPER") {
+        } else if (computerChoice === "Scissors" && humanChoice === "Paper") {
             console.log("You lose! Scissors beats Paper");
             ++computerScore;
         } else if (humanChoice === computerChoice) {
