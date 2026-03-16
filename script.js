@@ -15,8 +15,6 @@ let getHumanChoice = () => {
 };
 
 let playGame = () => {
-    let humanScore = 0;
-    let computerScore = 0;
     let playRound = (humanChoice, computerChoice) => {
         if (humanChoice === "Rock" && computerChoice === "Scissors") {
             console.log("You win! Rock beats Scissors");
@@ -40,13 +38,6 @@ let playGame = () => {
             console.log("It's a draw!");
         }
     };
-
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-
     console.log(`The Player's Score is ${humanScore}`);
     console.log(`The Computer's Score is ${computerScore}`);
 };
