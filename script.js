@@ -5,6 +5,12 @@ const comScore = document.createElement("div");
 
 let humanScore = 0;
 let computerScore = 0;
+let displayResults = () => {
+    playerScore.textContent= `The Player's Score is ${humanScore}`;
+    comScore.textContent= `The Computer's Score is ${computerScore}`;
+    results.appendChild(playerScore);
+    results.appendChild(comScore); 
+};
 
 let getComputerChoice = () => {
     let randomNumber = Math.floor(Math.random() * 3);
@@ -28,64 +34,34 @@ let playRound = (humanChoice, computerChoice) => {
         humanScore = 0;
         results.textContent = "You lose!";
     } else {
-
     if (humanChoice === "Rock" && computerChoice === "Scissors") {
         results.textContent = "You win! Rock beats Scissors";
         ++humanScore;
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
+        displayResults();
     } else if (humanChoice === "Paper" && computerChoice === "Rock") {
         results.textContent = "You win! Paper beats Rock";
         ++humanScore;
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
+        displayResults();      
     } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
         results.textContent = "You win! Scissors beats Paper";
         ++humanScore;
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
+        displayResults();      
     } else if (computerChoice === "Rock" && humanChoice === "Scissors") {
         results.textContent = "You lose! Rock beats Scissors";
         ++computerScore;
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
+        displayResults();      
     } else if (computerChoice === "Paper" && humanChoice === "Rock") {
         results.textContent = "You lose! Paper beats Rock";
         ++computerScore; 
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
+        displayResults();      
     } else if (computerChoice === "Scissors" && humanChoice === "Paper") {
         results.textContent = "You lose! Scissors beats Paper";
         ++computerScore;
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
+        displayResults();      
     } else if (humanChoice === computerChoice) {
         results.textContent = "It's a draw!";
-        playerScore.textContent= `The Player's Score is ${humanScore}`;
-        comScore.textContent= `The Computer's Score is ${computerScore}`;
-        results.appendChild(playerScore);
-        results.appendChild(comScore);
-    } else if (humanScore === 5) {
-        humanScore = 0;
-        computerScore = 0;
-        running = false; 
-    } else if (computerScore === 5) {
-        humanScore = 0;
-        computerScore = 0;
-        running = false;
-    }  }    
+        displayResults();      
+    }}
 };
 
 
@@ -100,7 +76,6 @@ let playGame = game.addEventListener("click", (event) => {
             playRound (playerSelection, computerSelection);
             playerScore.textContent= `The Player's Score is ${humanScore}`;
             comScore.textContent= `The Computer's Score is ${computerScore}`;
-
             break;
         case 'Paper':
             playerSelection = "Paper";
