@@ -25,11 +25,11 @@ let getComputerChoice = () => {
 };
 
 let playRound = (humanChoice, computerChoice) => {    
-    if(humanScore === 5) {
+    if(humanScore === 4) {
         computerScore = 0;
         humanScore = 0;
         results.textContent = "You win!";
-    } else if (computerScore === 5) {
+    } else if (computerScore === 4) {
         computerScore = 0;
         humanScore = 0;
         results.textContent = "You lose!";
